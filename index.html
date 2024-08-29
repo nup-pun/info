@@ -3,39 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anup's Personal Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <title>Anup Pun - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleLanguage(language) {
+            const enElements = document.querySelectorAll('.en');
+            const cnElements = document.querySelectorAll('.cn');
+            if (language === 'en') {
+                enElements.forEach(el => el.style.display = 'block');
+                cnElements.forEach(el => el.style.display = 'none');
+            } else if (language === 'cn') {
+                enElements.forEach(el => el.style.display = 'none');
+                cnElements.forEach(el => el.style.display = 'block');
+            }
+        }
+    </script>
 </head>
-<body>
-    <nav id="navbar">
-        <ul>
-            <li><a href="#welcome-section">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<body onload="toggleLanguage('en')">
 
-    <section id="welcome-section">
-        <h1>Welcome to My Personal Website</h1>
-        <p>I'm Anup, a student.</p>
-    </section>
+    <header>
+        <h1>Anup Pun (先锋)</h1>
+        <p>Resume - Website Under Construction</p>
+        <div class="language-toggle">
+            <button onclick="toggleLanguage('en')">English</button>
+            <button onclick="toggleLanguage('cn')">中文</button>
+        </div>
+    </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>Got to meet me to know me</p>
+        <h2 class="en">About Me</h2>
+        <h2 class="cn">关于我</h2>
+       <p class="en"><a href="Your_CV.pdf" download>Download my CV (PDF)</a></p>
+        <p class="cn"><a href="Your_CV.pdf" download>下载我的简历 (PDF)</a></p>
+    </section>
+
+    <section id="experience">
+        <h2 class="en">Experience</h2>
+        <h2 class="cn">工作经历</h2>
+        <ul>
+            <li class="en"><strong>Job Title</strong> at Company Name <br/> Dates Worked <br/> Brief description of your role and responsibilities.</li>
+            <li class="cn"><strong>职位</strong> 在公司名称 <br/> 工作时间 <br/> 你的角色和职责的简要描述。</li>
+            <li class="en"><strong>Job Title</strong> at Company Name <br/> Dates Worked <br/> Brief description of your role and responsibilities.</li>
+            <li class="cn"><strong>职位</strong> 在公司名称 <br/> 工作时间 <br/> 你的角色和职责的简要描述。</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2 class="en">Education</h2>
+        <h2 class="cn">教育背景</h2>
+        <ul>
+            <li class="en"><strong>Degree</strong>, Major <br/> School Name <br/> Graduation Year</li>
+            <li class="cn"><strong>学位</strong>, 专业 <br/> 学校名称 <br/> 毕业年份</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2 class="en">Skills</h2>
+        <h2 class="cn">技能</h2>
+        <ul>
+            <li class="en">Skill 1</li>
+            <li class="cn">技能 1</li>
+            <li class="en">Skill 2</li>
+            <li class="cn">技能 2</li>
+            <li class="en">Skill 3</li>
+            <li class="cn">技能 3</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2 class="en">Projects</h2>
+        <h2 class="cn">项目</h2>
+        <ul>
+            <li class="en"><strong>Project Name</strong>: Brief description of the project and what you achieved.</li>
+            <li class="cn"><strong>项目名称</strong>: 项目的简要描述以及你的成就。</li>
+            <li class="en"><strong>Project Name</strong>: Brief description of the project and what you achieved.</li>
+            <li class="cn"><strong>项目名称</strong>: 项目的简要描述以及你的成就。</li>
+        </ul>
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <h2 class="en">Contact</h2>
+        <h2 class="cn">联系</h2>
+        <p class="contact-info en">Mail me at: <a href="mailto:anup.poon@gmail.com">anup.poon@gmail.com</a></p>
+        <p class="contact-info cn">发给我邮件: <a href="mailto:anup.poon@gmail.com">anup.poon@gmail.com</a></p>
+	<p class="contact-info en">Wechat ID: Anuppun</p>
+        <p class="contact-info cn">加我的微信: Anuppun</p>
     </section>
 
-    <script src="script.js"></script>
 </body>
 </html>
